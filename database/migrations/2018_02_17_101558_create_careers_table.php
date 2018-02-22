@@ -16,7 +16,9 @@ class CreateCareersTable extends Migration
         Schema::create('careers', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            
+            $table->string('JobTitle',127);
+            $table->text('JobDescription');
+            $table->text('JobRequirement');
         });
     }
 
